@@ -8,6 +8,10 @@ app = FastAPI()
 def greet():
     return "Hello world"
 
+@app.get("/products")
+def get_all_products():
+    return "all products"
+
 # list of products with 4 products like phones, laptops, pens, tables
 products = [
     Product(id=1, name="Phone", description="A smartphone", price=699.99, quantity=50),
